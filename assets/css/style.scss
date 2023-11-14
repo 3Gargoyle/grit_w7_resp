@@ -1,0 +1,139 @@
+@import "./variables";
+
+body {
+    background-image: url(https://s1.webspoon.ru/receipts/2015/12/31510/orig_31510_0_xxl.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0,3;
+    width: 100vw;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600 /*400,500,600,700,900*/;
+    font-size: $headerFont;
+}
+
+header,
+div,
+body,
+main,
+aside,
+h2,
+h3,
+h4,
+footer {
+    border: 6px solid rgb(197, 126, 12);
+    border-style: double;
+    padding:0.5em;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    max-width: 80vw;
+    grid-template-areas: "header header header"
+    "content-1 content-1 sidebar"
+    "content-2 content-3  sidebar"
+    "content-4 content-4 sidebar" 
+    "footer footer footer";
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 0.3fr;
+    gap: 1rem;
+    }
+
+    .header {
+        grid-area: header;
+        display: flex;
+        background-color:$rosybrown;
+        opacity:$opacity;
+    }
+
+    h1 {
+        color:$black;
+        font-size:$headerFont;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: $font-size;
+        background-color:$cianblue;
+        border-radius:5%;
+
+        &__link-list
+        {
+            color: $black;
+            font-size: $font-size;
+            font-weight: 500;
+            font-style: italic;
+            padding: 5px ;
+            margin:0;
+            align-items: center
+        }
+        }
+
+    .img_sidebar {
+        max-width: 95%;
+        height: auto;
+        padding: 0.5em;
+        border-radius: 50%;
+    }
+
+.content-1 {
+    grid-area: content-1;
+    background-color: $burlywood;
+    opacity: $opacity;
+    }
+
+    .content-2 {
+        grid-area: content-2;
+        background-color: $choco;
+        opacity: $opacity;
+    }
+
+    .content-3 {
+        grid-area: content-3;
+        background-color: $darkgold;
+        opacity: $opacity;
+    }
+
+    .content-4 {
+        grid-area: content-4;
+        background-color: $darksalmon;
+        opacity: $opacity;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: $darkslategray;
+    }
+
+.nav {
+    max-width: 100%;
+    &__wrapper {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link {
+        cursor:pointer;
+        color:$cyan;
+        font-size: $nav_font;
+        font-weight: 500;
+        }
+    }
+
+ul {  
+    list-style-type: none;
+    }
